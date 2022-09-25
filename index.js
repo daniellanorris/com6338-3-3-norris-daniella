@@ -1,19 +1,5 @@
-function runQuiz() {
-   score = 0;
-   percScore = Math.round(score/5);
 
-   for(var i=0; i < questionsArr.i; i++) {
-    var trueAnswer = confirm(questionsArr[i])
-    if (questionsArr.answer[0, 3, 4] = trueAnswer) {
-        score++
-    }
-    if (questionsArr.answer[1,2] != trueAnswer) {
-        score++
-    }
-    }
-    alert('your score is  ' + percScore);
-}
-var questionsArr = new Array (
+var questionsArr = [
     {
     question: 'pale ales are typically lower in abv than ipas.',
     answer: true
@@ -34,4 +20,18 @@ var questionsArr = new Array (
     question: 'the last step before filling a glass is rinsing it with water',
     answer: true
     }
-);
+];
+
+function runQuiz() {
+    var score = 0;
+    var total = 5;
+    var finalScore = Math.round(score/total);
+ 
+    for(var i=0; i < questionsArr.length; i++) {
+     var response = window.confirm(questionsArr[i].question);
+     if (response == questionsArr[i].answer) {
+         score++;
+     } else {}
+ }
+ window.alert('your score is  ' + finalScore);
+}
