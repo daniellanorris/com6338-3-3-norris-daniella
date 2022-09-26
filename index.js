@@ -24,12 +24,12 @@ var questionsArr = [
 
 function runQuiz() {
     var score = 0;
-    var total = 5;
+    var total = questionsArr.length;
     for(var i=0; i < questionsArr.length; i++) {
      var response = window.confirm(questionsArr[i].question);
      if (response == questionsArr[i].answer) {
          score++;
      } else {}
- }  var finalScore = 100 *(score/total);
+ }  var finalScore = 100 * (score/total);
     alert('your score is  ' + Math.round(finalScore) + '%');
 }
